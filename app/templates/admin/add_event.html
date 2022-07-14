@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+  
+    <section class="panel panel-default">
+  <div class="panel-heading"> 
+  <h3 class="panel-title">Add Event</h3> 
+  </div> 
+  <div class="panel-body">
+    
+  <form action="/admin/add_event method="post" class="form-horizontal" role="form">
+  
+     <div class="form-group">
+      <label for="fname" class="col-sm-3 control-label">Event Name</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" name="eventname" id="eventname" placeholder="Enter your event name">
+      </div>
+    </div> <!-- form-group // -->
+
+    <div class="form-group">
+      <label for="fname" class="col-sm-3 control-label">Sport</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" name="sport" id="sport" placeholder="Enter your sport name">
+      </div>
+    </div> <!-- form-group // -->
+
+    <div class="form-group">
+      <label for="tech" class="col-sm-3 control-label">Select Team</label>
+      <div class="col-sm-3">
+     <select id="teams" name= "teams" class="form-control">
+        {%  for i in teams_ids %}
+            <option value="{{i.id}}">{{i.TeamName}}</option>
+        {% endfor  %}
+     </select>
+      </div>
+    </div> <!-- form-group // -->
+    
+    <hr>
+    <div class="form-group">
+      <div class="col-sm-offset-3 col-sm-9">
+        <button type="submit" class="btn btn-primary">Add</button>
+      </div>
+    </div> <!-- form-group // -->
+  </form>
+
+
+    
+  </div><!-- panel-body // -->
+  </section><!-- panel// -->
+  
+    
+  </div> <!-- container// -->
+
+{% endblock %}

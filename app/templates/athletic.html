@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+<main role="main">
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Olympic Committee</h1>
+        
+        <p>Select your member from dropdown.</p>
+
+        <form method="post" action="/details">
+        <label for="member">Choose a member:</label>
+        <select class="selectpicker" name="member" id="member">
+            {% for i in members %}
+            <option value="{{i.TeamID}}">{{i.FirstName}}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <input type="submit" class="btn btn-dark my-2" value="Submit">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-dark my-2"" data-toggle="modal" data-target="#exampleModal">
+            Update member
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="Member" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="fname">First Name</label>
+                        <input type="email" class="form-control" id="fname" aria-describedby="first name" placeholder="Enter first name">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="lname">Last Name</label>
+                        <input type="text" class="form-control" id="lname" placeholder="Last name">
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" class="form-control" id="city" placeholder="City">
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Birth date</label>
+                        <input type="date" class="form-control" id="dob" placeholder="dob">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        </form>
+
+      </div>
+    </section>
+
+
+
+  </main>
+
+
+    
+
+{% endblock %}

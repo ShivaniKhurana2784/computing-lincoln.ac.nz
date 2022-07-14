@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+  
+    <section class="panel panel-default">
+  <div class="panel-heading"> 
+  <h3 class="panel-title">Add Teams</h3> 
+  </div> 
+  <div class="panel-body">
+    
+  <form action="/admin/add_team" method="post" class="form-horizontal" role="form">
+  
+     <div class="form-group">
+      <label for="fname" class="col-sm-3 control-label">Team Name</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" name="teamname" id="teamname" placeholder="Enter your team name">
+      </div>
+    </div> <!-- form-group // -->
+    
+    <hr>
+    <div class="form-group">
+      <div class="col-sm-offset-3 col-sm-9">
+        <button type="submit" class="btn btn-primary">Add</button>
+      </div>
+    </div> <!-- form-group // -->
+  </form>
+    
+  </div><!-- panel-body // -->
+  </section><!-- panel// -->
+  
+    
+  </div> <!-- container// -->
+
+{% endblock %}

@@ -1,0 +1,225 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+{% block content %}
+
+<main role="main">
+
+  <section class="jumbotron text-center">
+    <div class="container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">City</th>
+            <th scope="col">Birth date</th>
+            <th scope="col">Team</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Ben</td>
+            <td>Barclay</td>
+            <td>Auckland</td>
+            <td>2002-02-04</td>
+            <td>Freestyle Skiing</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Anja</td>
+            <td>Barugh</td>
+            <td>Morrinsville</td>
+            <td>1999-05-21</td>
+            <td>Freestyle Skiing</td>
+          </tr>
+
+          <tr>
+            <th scope="row">3</th>
+            <td>Finn</td>
+            <td>Bilous</td>
+            <td>Wanaka</td>
+            <td>1999-09-22</td>
+            <td>Freestyle Skiing</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>Margaux</td>
+            <td>Hackett</td>
+            <td>Wanaka</td>
+            <td>1999-06-02</td>
+            <td>Freestyle Skiing</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>Nico</td>
+            <td>Porteous</td>
+            <td>Hamilton</td>
+            <td>2001-11-23</td>
+            <td>Freestyle Skiing</td>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td>Zoi</td>
+            <td>Sadowski-Synnott</td>
+            <td>Wanaka</td>
+            <td>2001-03-06</td>
+            <td>Snowboard</td>
+          </tr>
+          <tr>
+            <th scope="row">7</th>
+            <td>Tiarn</td>
+            <td>Collins</td>
+            <td>Queenstown</td>
+            <td>1999-11-09</td>
+            <td>Speed Skating</td>
+          </tr>
+          <tr>
+            <th scope="row">8</th>
+            <td>Peter </td>
+            <td> Michael</td>
+            <td>Wellington</td>
+            <td>1989-05-09</td>
+            <td>Speed Skating </td>
+          </tr>
+          <tr>
+            <th scope="row">9</th>
+            <td>Campbell</td>
+            <td>Wright</td>
+            <td>Rotorua</td>
+            <td>2002-05-25</td>
+            <td>Biathlon</td>
+          </tr>
+          </tbody>
+          </table>
+    </div>
+  </section>
+
+<section class="jumbotron text-center">
+  <div class="container">
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Listing members</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Listing Members Group by Teams</h4>
+        </div>
+        <div class="modal-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Team Name</th>
+                <th scope="col"> First Name</th>
+                <th scope="col"> Last Name</th>
+                <th scope="col">City</th>
+                <th scope="col">Birthdate</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Freestyle Skiing</td>
+                <td>Ben </td>
+                <td> Barclay</td>
+                <td>Auckland</td>
+                <td>2002-02-04</td>
+
+              </tr>
+
+              <tr>
+                <th scope="row">2</th>
+                <td>Freestyle Skiing</td>
+                <td>Anja </td>
+                <td> Barugh</td>
+                <td>Morrinsville</td>
+                <td>1999-05-21</td>
+              </tr>
+
+              <tr>
+                <th scope="row">3</th>
+                <td>Freestyle Skiing</td>
+                <td>Finn </td>
+                <td> Bilous</td>
+                <td>Wanaka</td>
+                <td>1999-09-22</td>
+              </tr>
+
+              <tr>
+                <th scope="row">4</th>
+                <td>Freestyle Skiing</td>
+                <td>Margaux </td>
+                <td> Hackett</td>
+                <td>Wanaka</td>
+                <td>1999-06-02</td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>Freestyle Skiing</td>
+                <td>Nico </td>
+                <td> Porteous</td>
+                <td>Hamilton</td>
+                <td>2001-11-23</td>
+              </tr>
+
+              <tr>
+                <th scope="row">6</th>
+                <td>Snowboard </td>
+                <td>Zoi </td>
+                <td> Sadowski-Synnott</td>
+                <td>Wanaka</td>
+                <td>2001-03-06</td>
+              </tr>
+              <tr>
+                <th scope="row">7</th>
+                <td>Snowboard </td>
+                <td>Tiarn </td>
+                <td> Collins</td>
+                <td>Queenstown</td>
+                <td>1999-11-09</td>
+              </tr>
+              <tr>
+                <th scope="row">8</th>
+                <td>Speed Skating </td>
+                <td>Peter </td>
+                <td> Michael</td>
+                <td>Wellington</td>
+                <td>1989-05-09</td>
+              </tr>
+
+              <tr>
+                <th scope="row">9</th>
+                <td> Biathlon</td>
+                <td>Campbell </td>
+                <td> Wright</td>
+                <td>Rotorua</td>
+                <td>2002-05-25</td>
+              </tr>
+
+              </tbody>
+          </table>  
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  </div>
+  </section>
+
+
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+  
+    <section class="panel panel-default">
+  <div class="panel-heading"> 
+  <h3 class="panel-title">Add Event Stage</h3> 
+  </div> 
+  <div class="panel-body">
+    
+  <form action="/admin/add_event_stage method="post" class="form-horizontal" role="form">
+  
+     <div class="form-group">
+      <label for="fname" class="col-sm-3 control-label">Stage Name</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" name="stagename" id="stagename" placeholder="Enter your event stage name">
+      </div>
+    </div> <!-- form-group // -->
+
+    <div class="form-group">
+      <label for="fname" class="col-sm-3 control-label">Location</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" name="location" id="location" placeholder="Enter your location">
+      </div>
+    </div> <!-- form-group // -->
+
+    <div class="form-group">
+      <label for="fname" class="col-sm-3 control-label">Stage Date</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" name="stagedate" id="stagedate" placeholder="Enter your Stage date">
+      </div>
+    </div> <!-- form-group // -->
+
+    <div class="form-group">
+      <label for="fname" class="col-sm-3 control-label">Qualifying</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" name="qualifying" id="qualifying" placeholder="Qualifying">
+      </div>
+    </div> <!-- form-group // -->
+
+    <div class="form-group">
+      <label for="fname" class="col-sm-3 control-label">PointsToQualify</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" name="pointstoqualify" id="pointstoqualify" placeholder="PointsToQualify">
+      </div>
+    </div> <!-- form-group // -->
+    
+    <div class="form-group">
+      <label for="tech" class="col-sm-3 control-label">Select Event Name</label>
+      <div class="col-sm-3">
+     <select id="event" name= "event" class="form-control">
+        {%  for i in event_ids %}
+            <option value="{{i.id}}">{{i.EventName}}</option>
+        {% endfor  %}
+     </select>
+      </div>
+    </div> <!-- form-group // -->
+    
+    <hr>
+    <div class="form-group">
+      <div class="col-sm-offset-3 col-sm-9">
+        <button type="submit" class="btn btn-primary">Add</button>
+      </div>
+    </div> <!-- form-group // -->
+  </form>
+
+
+    
+  </div><!-- panel-body // -->
+  </section><!-- panel// -->
+  
+    
+  </div> <!-- container// -->
+
+{% endblock %}
